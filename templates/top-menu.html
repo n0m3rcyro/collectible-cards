@@ -1,0 +1,19 @@
+<nav class="top-menu">
+    <div class="top-menu-color"></div>
+    <div class="top-menu-content">
+        <div class="top-menu-logo">
+            <img src="./static/logo_top_menu.png" />
+        </div>
+        <div class="top-menu-item"><a href="/collection">collection</a></div>
+        <div class="top-menu-item"><a href="/marketplace">marketplace</a></div>
+        <div class="top-menu-item"><a href="/my-account">my account</a></div>
+        {% if session.role == "admin" %}
+        <div class="top-menu-item"><a href="/administration">administration</a></div>
+        {% endif %}
+        <div class="top-menu-item sign-in"><a href="/logout">Sign-Out</a></div>
+        <div id="wallet-container" class="top-menu-item">
+            <img src="./static/coins.png" height="20"/>
+            <span id="wallet">-</span>
+        </div>
+    </div>
+</nav>

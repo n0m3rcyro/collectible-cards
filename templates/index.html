@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+   {% include 'top-menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="main-content">
+        <div class="container">
+            <div class="section-title">Your Collection</div>
+            <div class="players-selection">
+                <div class="spinner-container">
+                    <div class="spinner spinner__4"><span></span></div>
+                    <div>LOADING...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-background">
+        <div class="modal vertical-align">
+            <p></p>
+            <div class="modal-row">
+                <input type="text" name="asking_price" value="100" class="modal-input number" autocomplete="off" />
+            </div>
+            <div class="modal-row">
+                <div class="confirm-button">Sell</div>
+                <div class="cancel-button">Cancel</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_js %}
+    <script src="./static/js/collection.js"></script>
+{% endblock %}

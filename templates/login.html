@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <div style="width 100%; height: 925px;">
+            <div class="account-form vertical-align">
+                <div class="account-form-title">LOG IN</div>
+                <div style="color: red;">{{ msg }}</div>
+                <form action="/login" method="POST">
+                    <ol class="account-form-fields">
+                        <li class="account-form-field">
+                            <input type="email" name="email" required="required" placeholder="Email" class="account-form-input" autocomplete="off" />
+                        </li>
+                        <li class="account-form-field">
+                            <input type="password" name="password" required="required" placeholder="Password" class="account-form-input" autocomplete="off" />
+                        </li>
+                        <li>
+                            <input type="submit" name="login" class="account-form-submit" value="Log in now" />
+                        </li>
+                    </ol>
+                </form>
+                <div>Don't have an account? Click <a href="/register">here</a> to register!</div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
